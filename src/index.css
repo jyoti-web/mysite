@@ -101,6 +101,7 @@ code {
 }
 .navbar{
   padding: 0rem 19rem !important;
+  margin-bottom: 0px !important;
 }
 @media screen and (max-width: 1024px) {
   .navbar {
@@ -204,12 +205,14 @@ end .overlay
 }
 
 .item, .item1{
-  display: flex;
+  display: inline !important;
 }
 .item .img-responsive{
   height: 320px;
   padding-left:20px;
   padding-top: 20px;
+  display: inline !important;
+
 }
 .item .img-responsive:hover{
   
@@ -358,11 +361,11 @@ Timer clock
 /* ====================
 Latest news
 ======================== */
-.card-img-wrap {
+.latest .card-img-wrap {
   overflow: hidden;
   position: relative;
 }
-.card-img-wrap:after {
+.latest .card-img-wrap:after {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -370,17 +373,17 @@ Latest news
   opacity: 0;
   transition: opacity .25s;
 }
-.card-img-wrap img {
+.latest .card-img-wrap img {
   transition: transform .25s;
   width: 100%;
 }
-.card-img-wrap:hover img {
+.latest .card-img-wrap:hover img {
   transform: scale(1.2);
 }
-.card-img-wrap:hover:after {
+.latest .card-img-wrap:hover:after {
   opacity: 1;
 }
-.card{
+.desktop .card{
   width: 80% !important;
     position: absolute !important;
     top: 70%;
@@ -389,15 +392,16 @@ Latest news
     box-shadow: 0 2px 5px 1px rgba(0,0,0,.07);
     border: none !important;
 }
-.card-body h6{
+.latest .card-body h6{
   margin-bottom: 10px !important;
+  font-size: 15px;
 }
-.card-body p{
+ .card-body p{
   padding: 0px !important;
   margin-bottom: 0px !important;
   line-height: 25px;
 }
-.latest{
+.desktop{
   margin-bottom: 100px;
 }
 h6:hover{
@@ -406,6 +410,9 @@ h6:hover{
 .stick{
   margin: 0px 15px;
 }
+/* ====================
+footer
+======================= */
 .footer{
   background-image: url('./components/images/footer.jpg');
   height: 100%; 
@@ -447,6 +454,7 @@ h6:hover{
 }
 .newsletter h6{
   margin-top: 30px;
+  font-size: 15px;
 }
 .form-control:focus{
   box-shadow: none;
@@ -502,6 +510,9 @@ h6:hover{
   color: #FA929D;
   text-decoration: none;
 }
+/* =======================
+navbar .overlay
+======================= */
 .cardpay{
   margin: 0px 4px;
 }
@@ -579,10 +590,48 @@ scrollbar custom
   ::-webkit-scrollbar-thumb:hover {
   background: #FDD5DA;  
   }
-  /* ===============================
-  Product hover
+  /* ================================
+  brand 
   ================================ */
-  #cf {
+ .brand {
+  margin-top: 20px;
+ }
+  /* ===============================
+    mobile view footer
+  ================================ */
+  @media screen and (max-width: 768px) {
+    .content, .desktop {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .Mobile-footer, .mobile-latest {
+      display: none;
+    }
+  }
+  /* @media only screen and (min-width: 1280px) {
+  .Mobile-footer, .mobile-latest {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .Mobile-footer, .mobile-latest {
+      display: none;
+    }
+  } */
+  @media screen and (max-width: 768px){
+    .footer-list{
+      margin-bottom: 0px !important; 
+    }
+  }
+  .footer .card-header:hover{
+    background-color: #FA929D !important;
+  }
+  .footer .card{
+    background-color: #8a2be200 !important;
+    border:none !important;
+  }
+  /* #cf {
     position:relative;
     height:281px;
     width:450px;
@@ -605,13 +654,5 @@ scrollbar custom
     transition: opacity 1s ease-in-out;
 
 
-  } 
-  
-  .carousel-control{width: 8%;}
-.profile{text-align:center;}
-.profile a{transition:all linear 0.35s;}
-.profile a:hover{text-decoration:none;
--webkit-box-shadow: 14px 15px 9px -1px rgba(0,0,0,0.49);
--moz-box-shadow: 14px 15px 9px -1px rgba(0,0,0,0.49);
-box-shadow: 14px 15px 9px -1px rgba(0,0,0,0.49);
-}
+  }  */
+ 

@@ -201,6 +201,7 @@ class Homepage extends Component{
                     </div>
                     <Latest />
                     <Brand />
+                    
                 </div>     
         );
     }

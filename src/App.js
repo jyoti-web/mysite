@@ -5,8 +5,7 @@ import Homepage from './components/homepage';
 import Navigation from "./components/navbar";
 import Carousel from "./components/carousel";
 // import MapContainer from './components/map';
-// import Imghover from './components/producthover';
-import Overlay from './components/overlay';
+
 
 
 class App extends Component {
@@ -20,8 +19,7 @@ class App extends Component {
       <Homepage />
       <Footer />
       {/* <MapContainer /> */}
-      {/* <Imghover /> */}
-      <Overlay />
+    
     </div>
     );
   }
